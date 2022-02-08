@@ -1,12 +1,16 @@
-let name: string;
-let age: number;
+import "./App.css";
+import { useState } from "react";
+import InputField from "./components/InputField";
 
-function App() {
+const App: React.FC = () => {
+  const [todo, setTodo] = useState<string>("");
+
   return (
     <div className="App">
-      <h1>Hello!</h1>
+      <span className="heading">Taskify</span>
+      <InputField todo={todo} setTodo={setTodo} />
     </div>
   );
-}
+};
 
 export default App;
